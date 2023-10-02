@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Helvetica;
+    src: url("../static/helvetica.otf") format("opentype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 12%;
+    padding-right: 12%;
+
+    transition: padding 0.5s ease-in-out;
+}
+
+main {
+    background-color: var(--bg-main);
+    padding: 12px 32px 12px 32px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    --text-main: #212529;
+    --accent-text: #c96c42;
+    --bg-main: #FFF;
+    --accent-main: #DDD7C0;
+    --form-error: #E13A3A;
+    --form-success: #F9C67B;
+}
+
+p {
+    color: var(--black-100, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* text/normal */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+a {
+    color: var(--black-100, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--black-100, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Helvetica;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+h2 {
+    color: var(--black-100, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* title/h2 */
+    font-family: Helvetica;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3 {
+    color: var(--black-100, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* title/h3 */
+    font-family: Helvetica;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+@media (max-width: 1440px) {
+    body {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 8px 16px 20px 16px;
+        gap: 48px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+}
+
+
+
