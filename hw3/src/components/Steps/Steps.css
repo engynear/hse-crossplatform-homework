@@ -1,0 +1,42 @@
+#steps {
+    display: grid;
+    grid-template-areas: 
+        "A A A A A X B B B Y Y Y"
+        "Z Z Z Z Z - C C C C C C";
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    row-gap: 36px;
+}
+
+.steps-title {
+    grid-area: A;
+}
+
+.steps-text {
+    grid-area: B;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.steps-items {
+    grid-area: C;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    #steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
+}

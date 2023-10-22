@@ -1,0 +1,33 @@
+
+.step {
+    display: grid;
+    grid-template-areas: 
+        "N N N M M M"
+        "S S S S S S";
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    row-gap: 24px;
+}
+
+.step-title {
+    grid-area: N;
+}
+
+.step-text {
+    grid-area: M;
+}
+
+.step-separator {
+    grid-area: S;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 768px) {
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}

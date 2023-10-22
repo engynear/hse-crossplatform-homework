@@ -1,0 +1,35 @@
+#projects {
+    display: grid;
+    grid-template-areas: 
+        "A A A A A X X X X X X X"
+        "B B B B B B B B B B B B";
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    row-gap: 32px;
+}
+
+.projects-title {
+    grid-area: A;
+}
+
+.projects-grid {
+    grid-area: B;
+
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    #projects {
+        row-gap: 20px;
+    }
+
+    .projects-grid {
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(252px,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(252px,1fr));
+        overflow-x: auto;
+    }
+}
